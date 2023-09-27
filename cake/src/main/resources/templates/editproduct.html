@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+  <meta name="author" content="AdminKit">
+  <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+
+  <title>EDIT PRODUCT</title>
+
+  <link th:href="@{/css/app.css}" rel="stylesheet" type="text/css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+  <style>
+    .login fieldset{
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #ccc;
+      border: 1px solid #ccc;
+    }
+
+    legend{
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    form{
+      padding: 15px;
+    }
+
+    .form-group{
+      margin-top: 15px;
+    }
+
+    .form-group > label{
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .form-group > input, select{
+      width: 100%;
+      box-sizing: border-box;
+      height: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group > input:focus, textarea:focus, select:focus{
+      outline: unset;
+    }
+
+    .form-group > textarea{
+      display: block;
+    }
+
+    .div-btn{
+      text-align: center;
+    }
+
+    .div-btn button{
+      color: #f5f5f5;
+      background-color: red;
+      padding: 10px;
+      border: none;
+      margin-right: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="wrapper">
+  <nav id="sidebar" class="sidebar js-sidebar">
+    <div class="sidebar-content js-simplebar">
+      <a class="sidebar-brand" href="index.html">
+        <span class="align-middle">AdminKit</span>
+      </a>
+
+      <ul class="sidebar-nav">
+        <li class="sidebar-header">
+          Pages
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link"  href="#">
+            <i class="align-middle" ></i> <span class="align-middle">Dashboard</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" th:href="@{/home}" href="#">
+            <i class="align-middle" ></i> <span class="align-middle">Home Page</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#">
+            <i class="align-middle" ></i> <span class="align-middle">Admin</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#" th:href="@{/admin/contact}">
+            <i class="align-middle" ></i> <span class="align-middle">Contact</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#">
+            <i class="align-middle" ></i> <span class="align-middle">Categories</span>
+          </a>
+        </li>
+
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#" th:href="@{/admin/productlist}">
+            <i class="align-middle" ></i> <span class="align-middle">Products</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main">
+
+    <nav class="navbar navbar-expand navbar-light navbar-bg">
+      <a class="sidebar-toggle js-sidebar-toggle">
+        <i class="hamburger align-self-center"></i>
+      </a>
+
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav navbar-align">
+          <li class="nav-item dropdown">
+            <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+              <div class="position-relative">
+                <i class="align-middle" data-feather="bell"></i>
+                <span class="indicator">4</span>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+              <div class="dropdown-menu-header">
+                4 New Notifications
+              </div>
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <i class="text-danger" data-feather="alert-circle"></i>
+                    </div>
+                    <div class="col-10">
+                      <div class="text-dark">Update completed</div>
+                      <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                      <div class="text-muted small mt-1">30m ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <i class="text-warning" data-feather="bell"></i>
+                    </div>
+                    <div class="col-10">
+                      <div class="text-dark">Lorem ipsum</div>
+                      <div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+                      <div class="text-muted small mt-1">2h ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <i class="text-primary" data-feather="home"></i>
+                    </div>
+                    <div class="col-10">
+                      <div class="text-dark">Login from 192.186.1.8</div>
+                      <div class="text-muted small mt-1">5h ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <i class="text-success" data-feather="user-plus"></i>
+                    </div>
+                    <div class="col-10">
+                      <div class="text-dark">New connection</div>
+                      <div class="text-muted small mt-1">Christina accepted your request.</div>
+                      <div class="text-muted small mt-1">14h ago</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-menu-footer">
+                <a href="#" class="text-muted">Show all notifications</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+              <div class="position-relative">
+                <i class="align-middle" data-feather="message-square"></i>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+              <div class="dropdown-menu-header">
+                <div class="position-relative">
+                  4 New Messages
+                </div>
+              </div>
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                    </div>
+                    <div class="col-10 ps-2">
+                      <div class="text-dark">Vanessa Tucker</div>
+                      <div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+                      <div class="text-muted small mt-1">15m ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+                    </div>
+                    <div class="col-10 ps-2">
+                      <div class="text-dark">William Harris</div>
+                      <div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
+                      <div class="text-muted small mt-1">2h ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <img src="img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                    </div>
+                    <div class="col-10 ps-2">
+                      <div class="text-dark">Christina Mason</div>
+                      <div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
+                      <div class="text-muted small mt-1">4h ago</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="row g-0 align-items-center">
+                    <div class="col-2">
+                      <img src="img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                    </div>
+                    <div class="col-10 ps-2">
+                      <div class="text-dark">Sharon Lessman</div>
+                      <div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
+                      <div class="text-muted small mt-1">5h ago</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-menu-footer">
+                <a href="#" class="text-muted">Show all messages</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+              <i class="align-middle" data-feather="settings"></i>
+            </a>
+
+            <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+              <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">Charles Hall</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+              <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="pie-chart"></i> Analytics</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="index.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+              <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Log out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <div class="register container">
+        <fieldset>
+          <legend>
+            Thêm sản phẩm
+          </legend>
+          <form th:action="@{/admin/updateproduct/{id} (id = ${product.get().id})} " th:object="${product}"  method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label >Tên Sản phẩm</label>
+              <input type="text" name="name" id="idname" th:field="*{title}" >
+            </div>
+            <div class="form-group">
+              <label >Category</label>
+              <select th:field="*{categories.id}">
+                <option value=""> -- </option>
+                <option th:each="category : ${categories}"
+                        th:value="${category.getId()}"
+                        th:text="${category.getName()}"></option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input autocomplete="off" th:field="*{price}"  id="price" ></input>
+            </div>
+            <div class="form-group">
+              <label for="priceSale">Price Sale</label>
+              <input  autocomplete="off" th:field="*{priceSale}" id="priceSale" ></sf:input>
+            </div>
+            <div class="form-group">
+              <label >Mô tả sản phẩm</label>
+              <textarea class="summernote" name="describe" th:field="*{shortDes}" id="iddescribe" cols="145" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+              <label >Mô tả chi tiết</label>
+              <textarea class="summernote" autocomplete="off" th:field="*{detail}"  id="summernote" rows="5" cols="145" ></textarea>
+            </div>
+            <div class="form-group checkbox">
+              <label>Sản phẩm Hot ?</label>
+              <input type="checkbox" id="isHot" name="isHot" th:field="*{hot}">
+            </div>
+            <!--Avatar-->
+            <div class="form-group">
+              <label for="fileProductAvatar">Ảnh sản phẩm</label>
+              <input type="file" name="productAvatar" id="fileProductAvatar">
+            </div>
+            <div class="form-group">
+              <img th:src="@{'http://localhost:8080'+ ${product.get().avatar}}" width="100" height="100">
+            </div>
+            <!--Picture-->
+            <div class="form-group">
+              <label for="fileProductPictures">Ảnh mô tả</label>
+              <input type="file"  id="fileProductPictures" name="productPictures" multiple="multiple">
+            </div>
+            <div class="form-group" th:each="item : ${product.get().productImages}">
+                <img
+                     th:src="@{'http://localhost:8080'+ ${item.getPath()}}"
+                     width="100" height="100">
+
+            </div>
+            <div class="form-group div-btn">
+              <button type="submit" class="btn-register">Chỉnh sửa sản phẩm</button>
+              <a th:href="@{/admin/product/list}" class="btn btn-secondary" style="float: right;">Danh sách sản phẩm</a>
+            </div>
+          </form>
+        </fieldset>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-muted">
+          <div class="col-6 text-start">
+            <p class="mb-0">
+              <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a> - <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a>								&copy;
+            </p>
+          </div>
+          <div class="col-6 text-end">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script th:src="@{/js/app.js}"></script>
+<script>
+  $('.summernote').summernote({
+    tabsize: 2,
+    height: 100
+  });
+</script>
+
+
+</body>
+
+</html>>

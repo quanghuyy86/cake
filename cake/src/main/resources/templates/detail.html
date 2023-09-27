@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Theme website Teddy’s dành cho webiste quà tặng, đồ cho bé</title>
+        <meta name="description" content="Giao diện website Teddy’s sẽ là lựa chọn hoàn hảo cho website cửa hàng đồ lưu niệm, Hoa quà tặng, đồ mẹ và bé, siêu thị mini..">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" media="all">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/product_type.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/quickviews_popup_cart.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/productReviews.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    </head>
+    <body>
+        <div class="inbody">
+
+            <div th:replace="~{fragments/fragments :: header}"></div>
+
+            <div class="bodywrap">
+                <section class="bread-crumb">
+                    <span class="crumb-border"></span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 a-left">
+                                <ul class="breadcrumb">
+                                    <li class="home">
+                                        <a href="#" th:href="@{/home}"><span>Trang chủ</span></a>
+                                        <span class="mr_lr">&nbsp;/&nbsp;</span>
+                                    </li>
+                                    <li>
+                                        <a class="changeurl" href="#"><span>Chi tiết sản phẩm</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="product details-main clearfix" itemscope itemtype="https://schema.org/Product">
+                    <meta itemprop="url" content="//template-teddy.mysapo.net/gau-bong-teddy-cute">
+                    <meta itemprop="name" content="Gấu bông Teddy cute">
+                    <meta itemprop="image" content="https://bizweb.dktcdn.net/thumb/grande/100/283/016/products/03.jpg">
+
+                    <div class="container">
+                        <div class="section wrap-padding-15 wp_product_main clearfix">
+                            <div class="details-product section clearfix">
+                                <div class="row">
+                                    <div class="col-lg-9">
+                                        <div class="row">
+                                            <div class="product-detail-left product-images col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                                                <div class="col_large_default large-image">
+                                        
+                                                    <a data-fancybox-trigger="gallery" th:href="@{'http://localhost:8080' + ${product.get().avatar}}" >
+                                                        
+                                                        <img class="checkurl img-responsive" id="img_01"  th:src="@{'http://localhost:8080' + ${product.get().avatar}}" src="" alt="Gấu bông Teddy cute">
+                                                    </a>
+                                                    
+                                                    <div class="hidden">
+                                                        <div class="item">
+                                                            <a data-fancybox-trigger="gallery" href="javascript:;" title="Gấu bông Teddy cute" data-image="https://bizweb.dktcdn.net/100/283/016/products/04.jpg?v=1513593701263" data-zoom-image="https://bizweb.dktcdn.net/100/283/016/products/04.jpg?v=1513593701263"  data-rel="prettyPhoto[product-gallery]" >   
+                                                            </a>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a data-fancybox-trigger="gallery" href="javascript:;" title="Gấu bông Teddy cute" data-image="https://bizweb.dktcdn.net/100/283/016/products/02.jpg?v=1513593701263" data-zoom-image="https://bizweb.dktcdn.net/100/283/016/products/02.jpg?v=1513593701263"  data-rel="prettyPhoto[product-gallery]" >   
+                                                            </a>
+                                                        </div>  
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+<!--                                                <div class="section owlthumb_relative_product_1 owl_nav_custome1 clearfix ">-->
+<!--                                                    <div id="gallery_02" class=" owl-theme thumbnail-product thumb_product_details thumbdetail_modile_v1 not-thuongdq">-->
+<!--                                                        <div class="item">-->
+<!--                                                            <a href="javascript:void(0)" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/283/016/products/03.jpg?v=1513593701263">-->
+<!--                                                                <img class="lazyload" data-fancybox="gallery"   th:src="@{'http://localhost:8080' + ${product.get().}"  alt="Gấu bông Teddy cute">-->
+<!--                                                            </a>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="item">-->
+<!--                                                            <a href="javascript:void(0)" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/283/016/products/04.jpg?v=1513593701263">-->
+<!--                                                                <img class="lazyload" data-fancybox="gallery"   th:src=""  alt="Gấu bông Teddy cute">-->
+<!--                                                            </a>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="item">-->
+<!--                                                            <a href="javascript:void(0)" data-zoom-image="https://bizweb.dktcdn.net/thumb/1024x1024/100/283/016/products/02.jpg?v=1513593701263">-->
+<!--                                                                <img class="lazyload" data-fancybox="gallery"  th:src=""  alt="Gấu bông Teddy cute">-->
+<!--                                                            </a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 details-pro clearfix">
+                                                <h1 class="title-product clearfix" th:text="${product.get().title}"></h1>
+                                                <div class="fw w_100 clearfix" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                                                    <div class="group-status clearfix">
+                                                        <span class="first_status">Thương hiệu: <span class="status_name">Teddy</span></span>
+                                                        <span class="line"></span>
+                                                        <span class="first_status">
+                                                        Mã SP: 
+                                                        <span class="status_name masp" th:text=" 'SP_' + ${product.get().id}"></span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="price-box clearfix">
+                                                        <span class="special-price">
+                                                            <span class="price product-price" th:text="${product.get().price}"></span>
+                                                            <meta itemprop="price" content="500000">
+                                                            <meta itemprop="priceCurrency" content="VND">
+                                                        </span>
+                                                        <!-- Giá Khuyến mại -->
+                                                        <span class="old-price" itemprop="priceSpecification" itemscope="" itemtype="https://schema.org/priceSpecification">
+                                                            <del class="price product-price-old sale" th:text="${product.get().priceSale}"></del>
+                                                            <meta itemprop="price" content="550000">
+                                                            <meta itemprop="priceCurrency" content="VND">
+                                                        </span>
+                                                        <!-- Giá gốc -->
+                                                    </div>
+                                                    <div class="product-summary clearfix">
+                                                        <div class="rte">
+                                                            <em th:text="${product.get().shortDes}"></em>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-product col-sm-12 col-lg-12 col-md-12 col-xs-12">
+                                                    <div class="form-group form_button_details margin-top-15 clearfix">
+                                                        <div class="form_product_content type1">
+                                                            <div class="soluong soluong_type_1 show">
+                                                                <div class="custom input_number_product custom-btn-number form-control">
+                                                                    <button class="btn_num num_1 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro > 1 ) result.value--;return false;" type="button"><i class="fa fa-minus"></i></button>
+                                                                    <input type="text" id="qtym" name="quantity" value="1" maxlength="3" class="form-control prd_quantity " onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
+                                                                    <button class="btn_num num_2 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button"><i class="fa fa-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="button_actions clearfix">
+                                                                <button type="submit" class="btn btn_base btn_add_cart btn-cart add_to_cart"><span class="text_1">Thêm vào giỏ hàng</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <section class="section sec_tab clearfix">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="wrap_tab_ed clearfix">
+                                                            <div class="row">
+                                                                <div class="tab_h">
+                                                                    <div class="section bg_white clearfix">
+                                                                        <!-- Nav tabs -->
+                                                                        <div class="product-tab e-tabs not-dqtab clearfix">
+                                                                            <ul class="tabs tabs-title clearfix">
+                                                                                <li class="tab-link current" data-tab="tab-1">
+                                                                                    <h3><span>Mô tả</span></h3>
+                                                                                </li>
+                                                                                <li class="tab-link" data-tab="tab-2">
+                                                                                    <h3><span>Tab tùy chỉnh</span></h3>
+                                                                                </li>
+                                                                                <li class="tab-link" data-tab="tab-3">
+                                                                                    <h3><span>Đánh giá (App)</span></h3>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="tab-float clearfix">
+                                                                                <div id="tab-1" class="tab-content clearfix current">
+                                                                                    <div class="rte product_getcontent">
+                                                                                        <p th:text="${product.get().detail}"></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="tab-2" class="tab-content clearfix">
+                                                                                    <div class="rte">
+                                                                                        Nội dung tùy chỉnh viết ở đây   
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="tab-3" class="tab-content clearfix">
+                                                                                    <div class="rte">
+                                                                                        <div id="bizweb-product-reviews" class="bizweb-product-reviews" data-id="9387657">
+                                                                                            <div>
+                                                                                                <div class="title-bl">
+                                                                                                    <h4>Đánh giá sản phẩm</h4>
+                                                                                                </div>
+                                                                                                <div id="bizweb-product-reviews-sub">
+                                                                                                    <div id="bizweb-product-reviews-summary" class="bizweb-product-reviews-summary">
+                                                                                                        <div>
+                                                                                                            <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="bpr-summary">
+                                                                                                                <meta content="5" itemprop="bestRating">
+                                                                                                                <meta content="1" itemprop="worstRating">
+                                                                                                                <span class="bpr-summary-average" itemprop="ratingValue">4.5</span>
+                                                                                                                <div data-number="5" data-score="4.5" class="bizweb-product-reviews-star" id="bizweb-prv-summary-star" title="Tuyệt vời" style="color: rgb(255, 190, 0);">
+                                                                                                                    <i data-alt="1" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="2" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="3" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="4" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="5" class="star-half-png" title="Tuyệt vời"></i><input name="score" type="hidden" value="4.5" readonly="">
+                                                                                                                </div>
+                                                                                                                <div class="bpr-summary-caption">
+                                                                                                                    <div></div>
+                                                                                                                    <div>
+                                                                                                                        <div>
+                                                                                                                            <p itemprop="ratingCount">2</p>
+                                                                                                                        </div>
+                                                                                                                        <div><img height="15" width="16" src="https://productreviews.sapoapps.vn/assets/images/user.png"></div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <span class="product-reviews-summary-actions">
+                                                                                                    <input type="button" onclick="BPR.toggleForm(this);return false;" id="btnnewreview" value="Viết đánh giá">
+                                                                                                    </span>
+                                                                                                    <div class="bizweb-product-reviews-form" id="bpr-form_11423016" style="display:none;">
+                                                                                                        <form method="post" action="https://productreviews.sapoapps.vn/reviews/create" id="bizweb-product-reviews-frm" name="bizweb-product-reviews-frm">
+                                                                                                            <input type="hidden" name="productId" id="review_product_id" value="11423016">
+                                                                                                            <h4>Đánh giá sản phẩm</h4>
+                                                                                                            <fieldset class="bpr-form-rating">
+                                                                                                                <div id="dvRating"></div>
+                                                                                                                <input type="hidden" name="rating" id="review_rate" value="0">
+                                                                                                                <span class="bpr-form-message-error"></span>
+                                                                                                            </fieldset>
+                                                                                                            <fieldset class="bpr-form-contact">
+                                                                                                                <div class="bpr-form-contact-name require">
+                                                                                                                    <input type="text" maxlength="128" id="review_author" name="author" value="" placeholder="Nhập tên của bạn">
+                                                                                                                    <span class="bpr-form-message-error"></span>
+                                                                                                                </div>
+                                                                                                                <div class="bpr-form-contact-email require">
+                                                                                                                    <input type="text" maxlength="128" id="review_email" name="email" value="" placeholder="nguyenvan@gmail.com">
+                                                                                                                    <span class="bpr-form-message-error"></span>
+                                                                                                                </div>
+                                                                                                            </fieldset>
+                                                                                                            <fieldset class="bpr-form-review">
+                                                                                                                <div class="bpr-form-review-title">
+                                                                                                                    <input type="text" maxlength="512" id="review_title" name="title" value="" placeholder="Tiêu đề">
+                                                                                                                    <span class="bpr-form-message-error"></span>
+                                                                                                                </div>
+                                                                                                                <div class="bpr-form-review-body">
+                                                                                                                    <textarea maxlength="1500" id="review_body" name="body" rows="5" placeholder="Nội dung"></textarea>
+                                                                                                                    <span class="bpr-form-message-error"></span>
+                                                                                                                </div>
+                                                                                                            </fieldset>
+                                                                                                            <fieldset class="bpr-form-review-error">
+                                                                                                                <p class="error"></p>
+                                                                                                            </fieldset>
+                                                                                                            <fieldset class="bpr-form-actions">
+                                                                                                                <input type="button" onclick="BPR.submitForm(); return false;" value="Gửi" class="bpr-button-submit">
+                                                                                                            </fieldset>
+                                                                                                        </form>
+                                                                                                    </div>
+                                                                                                    <div style="display:none;" id="bpr-thanks" class="bizweb-product-reviews-form">
+                                                                                                        <b>Cảm ơn bạn đã đánh giá sản phẩm!</b>
+                                                                                                    </div>
+                                                                                                    <div id="bpr-list" class="bizweb-product-reviews-list">
+                                                                                                        <div id="bizweb-review-23720" class="bizweb-review" itemscope="" itemtype="http://schema.org/Review" itemprop="review">
+                                                                                                            <div class="bizweb-review-header">
+                                                                                                                <div>
+                                                                                                                    <div class="bizweb-review-header-img"><img src="https://productreviews.sapoapps.vn//assets/images/user.png" width="16" height="15"></div>
+                                                                                                                </div>
+                                                                                                                <div>
+                                                                                                                    <span class="bizweb-review-header-byline" itemprop="author">fdsfs</span>
+                                                                                                                    <div class="bizweb-product-reviews-star" data-score="5" data-number="5" title="Tuyệt vời" style="color: rgb(255, 190, 0);"><i data-alt="1" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="2" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="3" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="4" class="star-on-png" title="Tuyệt vời"></i>&nbsp;<i data-alt="5" class="star-on-png" title="Tuyệt vời"></i><input name="score" type="hidden" value="5" readonly=""></div>
+                                                                                                                    <span class="bizweb-review-header-time" itemprop="datePublished">27/10/2018</span>
+                                                                                                                </div>
+                                                                                                                <div class="bizweb-review-reportreview"><a onclick="BPR.reportReview(23720);return false" title="Báo cáo sai phạm" href="javascript: void(0);"><i aria-hidden="true" class="fa fa-warning"></i></a></div>
+                                                                                                                <p class="bizweb-review-header-title">fdsf</p>
+                                                                                                            </div>
+                                                                                                            <div class="bizweb-review-content">
+                                                                                                                <p class="bizweb-review-content-body" itemprop="description">fdsfds</p>
+                                                                                                            </div>
+                                                                                                            <div class="bizweb-review-footer"></div>
+                                                                                                            <div style="display:none;" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><span itemprop="ratingValue">5</span></div>
+                                                                                                        </div>
+                                                                                                        <div id="bizweb-review-17807" class="bizweb-review" itemscope="" itemtype="http://schema.org/Review" itemprop="review">
+                                                                                                            <div class="bizweb-review-header">
+                                                                                                                <div>
+                                                                                                                    <div class="bizweb-review-header-img"><img src="https://productreviews.sapoapps.vn//assets/images/user.png" width="16" height="15"></div>
+                                                                                                                </div>
+                                                                                                                <div>
+                                                                                                                    <span class="bizweb-review-header-byline" itemprop="author">Nagi Springfield</span>
+                                                                                                                    <div class="bizweb-product-reviews-star" data-score="4" data-number="5" title="Hài lòng" style="color: rgb(255, 190, 0);"><i data-alt="1" class="star-on-png" title="Hài lòng"></i>&nbsp;<i data-alt="2" class="star-on-png" title="Hài lòng"></i>&nbsp;<i data-alt="3" class="star-on-png" title="Hài lòng"></i>&nbsp;<i data-alt="4" class="star-on-png" title="Hài lòng"></i>&nbsp;<i data-alt="5" class="star-off-png" title="Hài lòng"></i><input name="score" type="hidden" value="4" readonly=""></div>
+                                                                                                                    <span class="bizweb-review-header-time" itemprop="datePublished">15/06/2018</span>
+                                                                                                                </div>
+                                                                                                                <div class="bizweb-review-reportreview"><a onclick="BPR.reportReview(17807);return false" title="Báo cáo sai phạm" href="javascript: void(0);"><i aria-hidden="true" class="fa fa-warning"></i></a></div>
+                                                                                                                <p class="bizweb-review-header-title">ngon</p>
+                                                                                                            </div>
+                                                                                                            <div class="bizweb-review-content">
+                                                                                                                <p class="bizweb-review-content-body" itemprop="description">df af s a   xcv b d fh  w e g dsf fh cgv j as  q</p>
+                                                                                                            </div>
+                                                                                                            <div class="bizweb-review-footer"></div>
+                                                                                                            <div style="display:none;" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating"><span itemprop="ratingValue">4</span></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div id="bpr-more-reviews"></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="col-lg-3 d-lg-block d-md-none d-sm-none d-xs-none hidden-xs">
+                                        <div class="aside-item aside_product_new">
+                                            <div class="aside-title">
+                                                <h2 class="title-head">
+                                                    <a href="#" title="Hàng mới về">Phụ kiện</a>
+                                                </h2>
+                                            </div>
+                                            <div class="aside-content">
+                                                <div class="product-mini-lists">
+                                                    <div class="products" th:each="product3 : ${product3}">
+                                                        <div class="product-mini-item clearfix   on-sale">
+                                                            <a href="#" class="product-img" title="haha" >
+                                                            <img class="lazyload loaded" th:src="@{'http://localhost:8080' + ${product3.avatar}}" data-was-processed="true">
+                                                            </a>
+                                                            <div class="product-info">
+                                                                <h3><a href="#"  class="product-name" th:text="${product3.title}"></a></h3>
+                                                                <div class="price-box">
+                                                                    <span class="price f-left"><span class="price product-price" th:text="${product3.priceSale}"></span> </span> <!-- Giá Khuyến mại -->
+                                                                    <span class="old-price  f-left"><del class="sale-price" th:text="${product3.price}"></del> </span> <!-- Giá gốc -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.products -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+<!--                    <div class="container">-->
+<!--                        <div class="related-product margin-top-20 xs-margin-top-0 margin-bottom-30 clearfix xs-margin-bottom-0 section_base">-->
+<!--                            <div class="heading">-->
+<!--                                <h2><a href="/khuyen-mai-hot" title="Sản phẩm cùng loại">Sản phẩm Hot</a></h2>-->
+<!--                            </div>-->
+<!--                            <div class="products products-view-grid slick_product slickone_first_5 ajax-carousel">-->
+<!--                                <div class="item" th:each="productHot : ${productHot}">-->
+<!--                                    <div class="item_product_mains products-view-grid">-->
+<!--                                        <div class="product-box product-box-zo">-->
+<!--                                            <div class="product-thumbnail">-->
+<!--                                                <div class="sale-flash">Sale</div>-->
+<!--                                                <a class="image_thumb" href="#" title="Nước hoa DG" tabindex="0">-->
+<!--                                                <img class="lazyload loaded" th:src="${'http://localhost:8080' + ${productHot.avatar}}" alt="Nước hoa DG" data-was-processed="true">-->
+<!--                                                </a>-->
+<!--                                            </div>-->
+<!--                                            <div class="product-info a-left">-->
+<!--                                                <h3 class="product-name"><a href="/dau-thom-dg" title="Nước hoa DG" tabindex="0" th:text="${productHot.title}"></a></h3>-->
+<!--                                                <div class="price-box clearfix">-->
+<!--                                                    <div class="special-price f-left">-->
+<!--                                                        <span class="price product-price" th:text="${productHot.price}"></span>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="old-price f-left">                                                           -->
+<!--                                                        <span class="price product-price-old">-->
+<!--                                                        150.000₫            -->
+<!--                                                        </span>-->
+<!--                                                    </div>-->
+<!--                                                    <div class="price-sale-flash f-left">- -->
+<!--                                                        33% -->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="product-action clearfix d-none d-sm-none d-md-none d-lg-block d-xl-block">-->
+<!--                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387270" enctype="multipart/form-data">          -->
+<!--                                                    <input type="hidden" name="variantId" value="14993333" tabindex="0">-->
+<!--                                                    <button class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Mua ngay" tabindex="0">-->
+<!--                                                    Mua ngay-->
+<!--                                                    </button>-->
+<!--                                                    <a title="Xem nhanh" href="/dau-thom-dg" data-handle="dau-thom-dg" class="btn-gray btn_view btn  right-to quick-view" tabindex="0">-->
+<!--                                                    <i class="fa fa-eye"></i>-->
+<!--                                                    </a>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+            <div th:replace="~{fragments/fragments :: footer}"></div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous"></script>
+        <script th:src="@{/js/config.js}"></script>
+        <script th:src="@{/js/jquery.elevatezoom308.min.js}"></script>
+        <script th:src="@{/js/product_detail.js}"></script>
+        <script th:src="@{/js/product_detail.js}"></script>
+    </body>
+</html>

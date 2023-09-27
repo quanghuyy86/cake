@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Theme website Teddy’s dành cho webiste quà tặng, đồ cho bé</title>
+  <meta name="description" content="Giao diện website Teddy’s sẽ là lựa chọn hoàn hảo cho website cửa hàng đồ lưu niệm, Hoa quà tặng, đồ mẹ và bé, siêu thị mini..">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" media="all">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/product_type.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/quickviews_popup_cart.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/productReviews.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css}"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+</head>
+<body>
+<div class="inbody">
+
+  <div th:replace="~{fragments/fragments :: header}"></div>
+
+  <div class="container mt-4">
+
+
+    <h1 class="text-center">Giỏ hàng</h1>
+    <div class="row">
+      <div class="col col-md-12">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>STT</th>
+            <th>Ảnh sản phẩm</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+            <th>Hành động</th>
+          </tr>
+          </thead>
+          <tbody id="datarow">
+          <tr th:each="item : ${cart.cartItems}">
+            <td>1</td>
+            <td th:text="${item.productName}"></td>
+<!--            <td></td>-->
+<!--            <td class="text-right">2</td>-->
+<!--            <td class="text-right">11,800,000.00</td>-->
+<!--            <td class="text-right">23,600,000</td>-->
+            <td>
+              <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
+                <i class="fa fa-trash" aria-hidden="true"></i> Xóa
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a href="../index.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                                                                  aria-hidden="true"></i>&nbsp;Quay
+          về trang chủ</a>
+        <a href="checkout.html" class="btn btn-primary btn-md"><i
+                class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thanh toán</a>
+      </div>
+    </div>
+  </div>
+
+  <div th:replace="~{fragments/fragments :: footer}"></div>
+
+</div>
+
+<script src="./js/config.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

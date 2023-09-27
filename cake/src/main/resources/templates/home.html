@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Theme website Teddy’s dành cho webiste quà tặng, đồ cho bé</title>
+        <meta name="description" content="Giao diện website Teddy’s sẽ là lựa chọn hoàn hảo cho website cửa hàng đồ lưu niệm, Hoa quà tặng, đồ mẹ và bé, siêu thị mini..">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" media="all">
+
+        <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    </head>
+</head>
+<body>
+    <div class="inbody">
+        <!--  Header  -->
+        <div th:replace="~{fragments/fragments :: header}"></div>
+
+        <!--  main  -->
+        <div class="bodywrap">
+            <h1 class="d-none">Teddy - Giao diện website Teddy’s sẽ là lựa chọn hoàn hảo cho website cửa hàng đồ lưu niệm, Hoa quà tặng, đồ mẹ và bé, siêu thị mini...</h1>
+            <section class="awe-section-1">
+                <div class="s_slider">
+                    <div class="section home-slider">
+                        <a href="#" tabindex="0">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="https://teddy.vn/wp-content/uploads/2023/03/Banner-2.png">
+                                <source media="(min-width: 992px)" srcset="https://teddy.vn/wp-content/uploads/2023/03/Banner-2.png">
+                                <source media="(min-width: 569px)" srcset="https://teddy.vn/wp-content/uploads/2023/03/Banner-2.png">
+                                <source media="(min-width: 480px)" srcset="https://teddy.vn/wp-content/uploads/2023/03/Banner-2.png">
+                                <img class="lazyload" src="https://teddy.vn/wp-content/uploads/2023/03/Banner-2.png" alt="Slider 1" data-was-processed="true">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="awe-section-2">
+                <div class="widget widget-policy section_policy clearfix">
+                    <div class="container">
+                        <div class="widget-inner ">
+                            <div class="slickblog">
+                                <div class="item">
+                                    <div class="policy-item">
+                                        <div class="media flexbox">
+                                            <img class="lazyload" th:src="@{/img/policy1.png}" data-src="./images/policy1.png" alt="Giao hàng miễn phí" data-was-processed="true">
+                                        </div>
+                                        <div class="info">
+                                            <span>Giao hàng miễn phí</span>
+                                            <p>Với tất cả đơn hàng nào trên 800.000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="policy-item">
+                                        <div class="media flexbox">
+                                            <img class="lazyload" th:src="@{/img/policy2.png}" data-src="./images/policy2.png" alt="Sản phẩm chất lượng" data-was-processed="true">
+                                        </div>
+                                        <div class="info">
+                                            <span>Sản phẩm chất lượng</span>
+                                            <p>Cam kết 100% hàng nhập khẩu chính hãng</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="policy-item">
+                                        <div class="media flexbox">
+                                            <img class="lazyload" th:src="@{/img/policy3.png}" data-src="./images/policy3.png" alt="Mua hàng giá ưu đãi" data-was-processed="true">
+                                        </div>
+                                        <div class="info">
+                                            <span>Mua hàng giá ưu đãi</span>
+                                            <p>Cơ hội nhận khuyến mãi &amp; giá sốc cuối tuần</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="awe-section-3">
+                <div class="section_module section_best_sale">
+                    <div class="container">
+                        <div class="heading_spbc">
+                            <h2><a href="/san-pham-noi-bat" title="Sản phẩm bán chạy">Sản phẩm Hot</a></h2>
+                        </div>
+                    </div>
+                    <div class="section-content d-lg-none d-xl-block d-md-none d-sm-none hidden-xs">
+                        <div class="products products-view-grid">
+                            <div class="slick_6">
+                                <div class="item" th:each="product : ${productHot}">
+                                    <div class="product-box product-box-zo">
+                                        <div class="product-thumbnail">
+                                            <div class="sale-flash new">New</div>
+                                            <a class="image_thumb" href="#" title="Vali đẹp cute" tabindex="-1">
+                                                <img class="lazyload" alt="Vali đẹp cute" th:src="@{'http://localhost:8080' + ${product.avatar}}">
+                                            </a>
+                                        </div>
+                                        <div class="product-info a-left">
+                                            <h3 class="product-name">
+                                                <a href="#" tabindex="-1" th:text="${product.title}"></a>
+                                            </h3>
+                                            <div class="price-box clearfix">
+                                                <div class="special-price f-left">
+                                                    <span class="price product-price" th:text="${product.price}"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-action clearfix d-none d-sm-none d-md-none d-lg-block d-xl-block">
+<!--                                            <form action="#" method="get" class="variants form-nut-grid"  enctype="multipart/form-data" >-->
+                                            <div class="variants form-nut-grid">
+                                                <input type="hidden" name="variantId" value="14992173" tabindex="-1">
+                                                <button class="btn-buy btn-cart btn btn-primary left-to add_to_cart" tabindex="-1" th:onclick="'AddProductToCart(' + ${product.id} + ', 1)'" >
+                                                    Thêm vào giỏ hàng
+                                                </button>
+                                                <a title="Xem nhanh" th:href="@{/detailproduct/{id} (id=${product.id})}" data-handle="vali-dep-cute" class="btn-gray btn_view btn  right-to quick-view" tabindex="-1">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+<!--                                            </form>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="awe-section-4">
+                <div class="section_2banner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <div class="adv_bottom_inner">
+                                    <figure class="img_effect">
+                                        <a href="#" title="Banner 1">
+                                            <img class="lazyload" src="/img/Banner-teddy-1.jpg" alt="Banner 1" data-was-processed="true">
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <div class="adv_bottom_inner">
+                                    <figure class="img_effect">
+                                        <a href="#" title="Banner 2">
+                                            <img class="lazyload" src="/img/Banner-teddy-2.jpg"  alt="Banner 2" data-was-processed="true">
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="awe-section-5">
+                <div class="section_x section_module sec_product_favourite">
+                    <div class="container">
+                        <div class="heading">
+                            <h2><a href="#" title="Sản phẩm yêu thích">Bánh ngọt nhỏ</a></h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="products products-view-grid">
+                                <div class="slick_5">
+                                    <div class="item" th:each="product2 : ${product2}">
+                                        <div class="product-box product-box-zo">
+                                            <div class="product-thumbnail">
+                                                <div class="sale-flash new">New</div>
+                                                <a class="image_thumb" href="/gau-bong-teddy-cute" title="Gấu bông Teddy cute" tabindex="-1">
+                                                    <img class="lazyload" th:src="@{'http://localhost:8080' + ${product2.avatar}}" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/products/03.jpg" alt="Gấu bông Teddy cute" data-was-processed="true">
+                                                </a>
+                                            </div>
+                                            <div class="product-info a-left">
+                                                <h3 class="product-name">
+                                                    <a href="#" tabindex="-1" th:text="${product2.title}"></a>
+                                                </h3>
+                                                <div class="price-box clearfix">
+                                                    <div class="special-price f-left">
+                                                        <span class="price product-price" th:text="${product2.price}"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-action clearfix d-none d-sm-none d-md-none d-lg-block d-xl-block">
+<!--                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387657" enctype="multipart/form-data">-->
+                                                <div class="variants form-nut-grid" data-id="product-actions-9387657">
+                                                    <input class="hidden" type="hidden" name="variantId" value="14993831" tabindex="-1">
+                                                    <button class="btn btn-cart btn btn-primary  left-to"type="button" th:onclick="'AddProductToCart(' + ${product2.id} + ', 1)'" tabindex="-1">
+                                                        Thêm vào giỏ hàng
+                                                    </button>
+                                                    <a title="Xem nhanh" th:href="@{/detailproduct/{id} (id = ${product2.id})}" data-handle="gau-bong-teddy-cute" class="btn-gray btn_view btn  right-to quick-view" tabindex="-1">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+<!--                                                </form>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="awe-section-6">
+                <div class="section_all">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="section_1banner">
+                                    <div class="adv_bottom_inner">
+                                        <figure class="img_effect">
+                                            <a href="#" title="Banner">
+                                                <img class="lazyload" src="/img/Banner-teddy-1.jpg" alt="Banner" data-was-processed="true">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="section_x section_module section_product_feature">
+                                    <div class="heading">
+                                        <h2><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật">Bánh sinh nhật</a></h2>
+                                    </div>
+                                    <div class="section-content">
+                                        <div class="products products-view-grid">
+                                            <div class="slick_product slicktwo_frist">
+                                                <div th:each="product1 : ${product1}">
+                                                    <div class="item" style="width: 100%; display: inline-block;">
+                                                        <div class="product-box product-box-zo">
+                                                            <div class="product-thumbnail">
+                                                                <div class="sale-flash new">New</div>
+                                                                <a class="image_thumb" href="#" tabindex="0">
+                                                                    <img class="lazyload" th:src="@{'http://localhost:8080' + ${product1.avatar}} "data-was-processed="true">
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-info a-left">
+                                                                <h3 class="product-name">
+                                                                    <a href="#" tabindex="-1" th:text="${product1.title}"></a>
+                                                                </h3>
+                                                                <div class="price-box clearfix">
+                                                                    <div class="special-price f-left">
+                                                                        <span class="price product-price" th:text="${product1.price}"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-action clearfix d-none d-sm-none d-md-none d-lg-block d-xl-block">
+<!--                                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387657" enctype="multipart/form-data">-->
+                                                                <div  class="variants form-nut-grid" data-id="product-actions-9387657">
+                                                                    <input class="hidden" type="hidden" name="variantId" value="14993831" tabindex="0">
+                                                                    <button class="btn btn-cart btn btn-primary  left-to " title="Chọn sản phẩm" type="button" th:onclick="'AddProductToCart(' + ${product1.id} + ', 1)'" tabindex="0">
+                                                                        Thêm vào giỏ hàng
+                                                                    </button>
+                                                                    <a title="Xem nhanh" th:href="@{/detailproduct/{id} (id = ${product1.id})}" data-handle="gau-bong-teddy-cute" class="btn-gray btn_view btn  right-to quick-view" tabindex="0">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </div>
+<!--                                                                </form>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section_blog_index">
+                                    <div class="heading">
+                                        <h2><a href="/tin-tuc" title="Tin khuyến mãi">Tin khuyến mãi</a></h2>
+                                    </div>
+                                    <div class="news_hot_left">
+                                        <div class="content-blog-index slickblog">
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="myblog">
+                                                <div class="image-blog-left">
+                                                    <a class="image-blog" href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">
+                                                        <img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="https://bizweb.dktcdn.net/thumb/large/100/283/016/articles/arr1.jpg" alt="Quà tặng người yêu ngày 8/3 ý nghĩa">
+                                                    </a>
+                                                </div>
+                                                <div class="content-right-blog">
+                                                    <div class="title_blog_home">
+                                                        <h3>
+                                                            <a href="/qua-tang-nguoi-yeu-ngay-8-3-y-nghia" title="Quà tặng người yêu ngày 8/3 ý nghĩa" tabindex="0">Quà tặng người yêu ngày 8/3 ý nghĩa</a>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="content_day_blog"><i class="far fa-clock"></i><span>Monday,</span>
+                                                        <span class="news_home_content_short_time">
+                                                            18/12/2017
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="sec_product_shock">
+                                    <div class="warp_insert">
+                                        <div class="title_shock">
+                                            Giá cực<br>sốc
+                                        </div>
+                                        <div class="section-content">
+                                            <div class="products products-view-grid">
+                                                <div class="slick_pro_shock">
+                                                    <div class="item item_off" th:each="productHot : ${productHot}">
+                                                        <div class="product-box product-box-zo product-box-shock">
+                                                            <div class="product-thumbnail">
+                                                                <div class="sale-flash hot">Hot</div>
+                                                                <a class="image_thumb" href="/tui-nho-nhan-mat-quy" title="Túi nhỏ nhắn mặt quỷ" tabindex="-1">
+                                                                    <img class="lazyload" th:src="@{'http://localhost:8080' + ${productHot.avatar}}" alt="Túi nhỏ nhắn mặt quỷ">
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-info a-left">
+                                                                <h3 class="product-name"><a href="#"  tabindex="-1" th:text="${productHot.title}"></a></h3>
+                                                                <div class="price-box clearfix">
+                                                                    <div class="special-price f-left">
+                                                                        <span class="price product-price" th:text="${productHot.price}"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-summary-list">
+                                                                <span th:text="${productHot.shortDes}"></span>
+                                                            </div>
+                                                            <div class="product-action clearfix d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                                                                <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-9387145" enctype="multipart/form-data">
+                                                                    <input type="hidden" name="variantId" value="14993139" tabindex="-1">
+                                                                    <button class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Mua ngay" tabindex="-1">
+                                                                        Mua ngay
+                                                                    </button>
+                                                                    <a title="Xem nhanh" href="#" data-handle="tui-nho-nhan-mat-quy" class="btn-gray btn_view btn  right-to quick-view" tabindex="-1">
+                                                                        <i class="fa fa-search-plus"></i>
+                                                                    </a>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec_product_bestseller">
+                                    <div class="heading">
+                                        <h2><a href="/san-pham-noi-bat" title=" Bán chạy nhất">Phụ kiện</a></h2>
+                                    </div>
+                                    <div class="section-content">
+                                        <div class="products products-view-grid">
+                                            <div class="slick_prodeal">
+                                                <div th:each="product3 : ${product3}">
+                                                    <div class="item">
+                                                            <div class="product-mini-item clearfix   on-sale">
+                                                            <a href="#" class="product-img" title="Gấu bông Teddy cute" tabindex="0">
+                                                                <img class="lazyload" th:src="@{'http://localhost:8080' + ${product3.avatar}}" data-was-processed="true">
+                                                            </a>
+                                                            <div class="product-info">
+                                                                <h3><a href="#" th:text="${product3.title}"  class="product-name" tabindex="0"></a></h3>
+                                                                <div class="price-box">
+                                                                    <span class="price f-left"><span class="price product-price" th:text="${product3.price}"></span> </span>
+                                                                    <span class="old-price  f-left"><del class="sale-price" th:text="${product3.priceSale}"></del> </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--  Footer  -->
+        <div th:replace="~{fragments/fragments :: footer}"></div>
+    </div>
+    <!--  Script  -->
+    <script th:src="@{/js/config.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/store.js}"></script>
+</body>
+</html>

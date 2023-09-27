@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Theme website Teddy’s dành cho webiste quà tặng, đồ cho bé</title>
+    <meta name="description" content="Giao diện website Teddy’s sẽ là lựa chọn hoàn hảo cho website cửa hàng đồ lưu niệm, Hoa quà tặng, đồ mẹ và bé, siêu thị mini..">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" media="all">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/contact_style.css}">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="inbody">
+<!--        Header-->
+        <div th:replace="fragments/fragments :: header"></div>
+
+<!--        main-->
+        <div class="bodywrap">
+            <div class="section wrap_background">
+                <section class="bread-crumb">
+                    <span class="crumb-border"></span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 a-left">
+                                <ul class="breadcrumb">
+                                    <li class="home">
+                                        <a th:href="@{/home}"><span>Trang chủ</span></a>
+                                        <span class="mr_lr">&nbsp;/&nbsp;</span>
+                                    </li>
+                                    <li><strong><span> Liên hệ </span></strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container">
+                    <div class="page_contact contact">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="page-login page_cotact">
+                                    <div class="heading">
+                                        <h1 class="title-head  margin-bottom-30"><span>Liên hệ với chúng tôi</span></h1>
+                                    </div>
+                                    <p class="sum_contact">Teddy's là cửa hàng chuyên cung cấp các sản phẩm quà tặng đẹp mắt hấp dẫn người dùng ở mọi lứa tuổi</p>
+                                    <div id="pagelogin">
+                                        <form accept-charset="utf-8" th:object="${contactEntity}" th:action="@{/contactUs}" action="#" id="contact" method="post">
+                                            <input name="FormType" type="hidden" value="contact">
+                                            <input name="utf8" type="hidden" value="true"><input type="hidden" id="Token-8d443a88023d4f0fab63a769bda6affc" name="Token" value="03AGdBq257gGbCLJxzNTZqWI1yWDDW5pn-EPApC3hrgAsz-P3xjU_8_h5Mo6s7IjmAsTOBhsPORqvUh38-a7KN4Z3y-_cMikxPRaebiOM6yC7_tQSdHoAXshAHV73B2-Zm4XDzzUT2ZagLywGO-jrAgljgwZcJ6B0vbJNh6Lb9PTE-wFYTNh1PbYI54m74Ane-sdaIyvSbp8N3XiyEftl0rXTOr-FQyP8sD8kmuSjxJK8QC54NQBbyky9xE1GMWUtOWbh51aqqmuC_K0LHDIhLfZ3AaQqZv9F6gTdj8W7SleMJ2mD_JTeDtIkUgoxNCi5MsMIx9GXKfPUIgaIn7U10dKGEtOcP2nGnTOtvCG6T6ve_h7-UBEMu0Asfn1fVeYthI1_SHdpZqn_shRv8PcN6tTTt_f7aCgTTNw"><script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+                                            <script>
+                                                grecaptcha.ready(function() {
+                                                    grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {action: "/contact"})
+                                                        .then(function(token) {
+                                                            document.getElementById("Token-8d443a88023d4f0fab63a769bda6affc").value = token
+                                                        });
+                                                });
+                                            </script>
+                                            <div class="form-signup clearfix">
+                                                <div class="row group_contact">
+                                                    <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label>Họ và tên</label>
+                                                        <input type="text" th:field="*{name}"  class="form-control  form-control-lg" required="" value="" name="contact[Name]">
+                                                    </fieldset>
+                                                    <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label>Email</label>
+                                                        <input type="email" th:field="*{email}"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" id="email1" class="form-control form-control-lg" value="" name="contact[email]">
+                                                    </fieldset>
+                                                    <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label>Số điện thoại</label>
+                                                        <input type="number" th:field="*{sdt}"  class="form-control form-control-comment form-control-lg" name="Phone" required="">
+                                                    </fieldset>
+                                                    <fieldset class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <label>Nội dung</label>
+                                                        <textarea name="contact[body]" th:field="*{message}"  id="comment" class="form-control content-area form-control-lg" rows="5" required=""></textarea>
+                                                    </fieldset>
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top-10">
+                                                        <button type="submit" class="button_gradient btn btn-primary btn-lienhe">Gửi liên hệ</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="widget-item info-contact">
+                                    <h2>Hệ thống cửa hàng</h2>
+                                    <div class="city-wrapper" style="display: block;">
+                                        <div class="nano has-scrollbar">
+                                            <div class="content">
+                                                <div class="showroom-item">
+                                                    <div class="title-module-page">
+                                                        <h4><span><i class="fas fa-map-marker-alt"></i>Teddy's Kim Mã</span></h4>
+                                                    </div>
+                                                    <span class="showroom-address"><span>Địa chỉ: 95 Kim Mã, Ba Đình, Hà Nội</span></span>
+                                                    <span class="showroom-contact"><span>Mở cửa:
+                                                        8h00 am  - 22h00 pm</span></span>
+                                                    <span class="showroom-contact"><span>Hotline:
+                                                        <a href="tel:024.66742332">024.66742332</a>
+                                                        </span></span>
+                                                </div>
+                                                <div class="showroom-item">
+                                                    <div class="title-module-page">
+                                                        <h4><span><i class="fas fa-map-marker-alt"></i>Teddy's Thanh Xuân</span></h4>
+                                                    </div>
+                                                    <span class="showroom-address"><span>Địa chỉ: 250 Nguyễn Trãi, Thanh Xuân, Hà Nội</span></span>
+                                                    <span class="showroom-contact"><span>Mở cửa:
+                                                        8h00 am  - 22h00 pm</span></span>
+                                                    <span class="showroom-contact"><span>Hotline:
+                                                        <a href="tel:024.73036880">024.73036880</a>
+                                                        </span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+<!--        Fotter-->
+        <div th:replace="fragments/fragments :: footer"></div>
+    </div>
+    <script th:src="@{/js/config.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>
