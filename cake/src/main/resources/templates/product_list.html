@@ -273,8 +273,8 @@
             <tr th:each="item, sate : ${productList}">
               <td th:text="${sate.count}"></td>
               <td th:text="${item.title}"></td>
-              <td th:text="${item.price}"></td>
-              <td th:text="${item.priceSale}"></td>
+              <td th:text="${#numbers.formatCurrency(item.price)}"></td>
+              <td th:text="${#numbers.formatCurrency(item.priceSale)}"></td>
               <td th:text="${item.categories.name}"></td>
               <td th:text="${item.status}"></td>
               <td th:text="${item.hot}"></td>

@@ -3,7 +3,6 @@ package vn.edu.hau.cake.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -56,6 +55,19 @@ public class Product extends BaseEntity{
             fetch = FetchType.EAGER,
             mappedBy = "product")
     private Set<ProductImages> productImages = new HashSet<ProductImages>();
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            mappedBy = "product")
+    private Set<SaleOrderProducts> saleOrderProducts = new HashSet<SaleOrderProducts>();
+
+
+    public Set<SaleOrderProducts> getSaleOrderProducts() {
+        return saleOrderProducts;
+    }
+
+    public void setSaleOrderProducts(Set<SaleOrderProducts> saleOrderProducts) {
+        this.saleOrderProducts = saleOrderProducts;
+    }
 
     public String getTitle() {
         return title;

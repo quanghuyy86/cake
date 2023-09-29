@@ -113,7 +113,7 @@
                                             </h3>
                                             <div class="price-box clearfix">
                                                 <div class="special-price f-left">
-                                                    <span class="price product-price" th:text="${product.price}"></span>
+                                                    <span class="price product-price" th:text="${#numbers.formatCurrency(product.priceSale)}"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -186,7 +186,7 @@
                                                 </h3>
                                                 <div class="price-box clearfix">
                                                     <div class="special-price f-left">
-                                                        <span class="price product-price" th:text="${product2.price}"></span>
+                                                        <span class="price product-price" th:text="${#numbers.formatCurrency(product2.priceSale)}"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -247,7 +247,7 @@
                                                                 </h3>
                                                                 <div class="price-box clearfix">
                                                                     <div class="special-price f-left">
-                                                                        <span class="price product-price" th:text="${product1.price}"></span>
+                                                                        <span class="price product-price" th:text="${#numbers.formatCurrency(product1.price)}"></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -416,7 +416,7 @@
                                                                 <h3 class="product-name"><a href="#"  tabindex="-1" th:text="${productHot.title}"></a></h3>
                                                                 <div class="price-box clearfix">
                                                                     <div class="special-price f-left">
-                                                                        <span class="price product-price" th:text="${productHot.price}"></span>
+                                                                        <span class="price product-price" th:text="${#numbers.formatCurrency(productHot.priceSale)}"></span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -457,7 +457,7 @@
                                                             <div class="product-info">
                                                                 <h3><a href="#" th:text="${product3.title}"  class="product-name" tabindex="0"></a></h3>
                                                                 <div class="price-box">
-                                                                    <span class="price f-left"><span class="price product-price" th:text="${product3.price}"></span> </span>
+                                                                    <span class="price f-left"><span class="price product-price" th:text="${#numbers.formatCurrency(product3.priceSale)}"></span> </span>
                                                                     <span class="old-price  f-left"><del class="sale-price" th:text="${product3.priceSale}"></del> </span>
                                                                 </div>
                                                             </div>

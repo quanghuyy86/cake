@@ -1,5 +1,6 @@
 package vn.edu.hau.cake.service;
 
+import ch.qos.logback.core.spi.AbstractComponentTracker;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,9 +26,6 @@ import java.util.Optional;
 public class ProductServiceIplm implements ProductService{
     @Autowired
     private ProductRepository productRepository;
-
-    @Autowired
-    private ProductImageRepository productImageRepository;
 
     public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/uploads/";
 
@@ -65,7 +63,6 @@ public class ProductServiceIplm implements ProductService{
                 ProductImages productImages = new ProductImages();
                 productImages.setPath("/uploads/" + pic.getOriginalFilename());
                 productImages.setTitle(pic.getOriginalFilename());
-//                productImageRepository.save(productImages);
                 entity.addProductImages(productImages);
             }
         }
@@ -220,4 +217,5 @@ public class ProductServiceIplm implements ProductService{
     public void deleteAll() {
         productRepository.deleteAll();
     }
+
 }

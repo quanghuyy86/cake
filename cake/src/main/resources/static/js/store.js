@@ -19,6 +19,7 @@ function AddProductToCart(productId, quanlity){
 
             // tăng số lượng sản phẩm trong giỏ hàng trong icon
             $("#showTotalItemInCart").html(jsonResult.totalItems);
+            $("#total_price").html(jsonResult.totalPrice);
             /*$([document.documentElement, document.body]).animate({
                 scrollTop: $("#iconShowTotalItemsInCart").offset().top
             }, 2000);*/

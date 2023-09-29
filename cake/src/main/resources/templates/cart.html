@@ -47,26 +47,31 @@
           </tr>
           </thead>
           <tbody id="datarow">
-          <tr th:each="item : ${cart.cartItems}">
-            <td>1</td>
+          <tr th:each="item, sate : ${session.cart.cartItems}">
+            <td th:text="${sate.count}"></td>
+            <td >
+              <img th:src="@{'http://localhost:8080' + ${item.avatar}}" width="100" height="100">
+            </td>
             <td th:text="${item.productName}"></td>
-<!--            <td></td>-->
-<!--            <td class="text-right">2</td>-->
-<!--            <td class="text-right">11,800,000.00</td>-->
-<!--            <td class="text-right">23,600,000</td>-->
+            <td th:text="${item.quanlity}"></td>
+            <td th:text="${#numbers.formatCurrency(item.priceUnit)}"></td>
+            <td th:text="${#numbers.formatCurrency(item.priceUnit * item.quanlity)}"></td>
             <td>
               <a id="delete_1" data-sp-ma="2" class="btn btn-danger btn-delete-sanpham">
                 <i class="fa fa-trash" aria-hidden="true"></i> Xóa
               </a>
             </td>
           </tr>
+          <tr>
+            <td style="font-weight: bold" >Tổng tiền:</td>
+            <td colspan="6" id="total_price" th:text="${#numbers.formatCurrency(session.totalPrice)}"></td>
+          </tr>
           </tbody>
         </table>
 
-        <a href="../index.html" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
-                                                                  aria-hidden="true"></i>&nbsp;Quay
-          về trang chủ</a>
-        <a href="checkout.html" class="btn btn-primary btn-md"><i
+        <a th:href="@{/home}" class="btn btn-warning btn-md"><i class="fa fa-arrow-left"
+                                                                  aria-hidden="true"></i>Trang chủ</a>
+        <a th:href="@{/checkout}" class="btn btn-primary btn-md"><i
                 class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Thanh toán</a>
       </div>
     </div>

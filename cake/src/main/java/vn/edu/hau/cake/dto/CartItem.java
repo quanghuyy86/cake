@@ -2,11 +2,6 @@ package vn.edu.hau.cake.dto;
 
 import java.math.BigDecimal;
 
-/**
- * Biểu thị cho 1 sản phẩm trong giỏ hàng.
- * @author daing
- *
- */
 public class CartItem {
 	// mã sản phẩm 
 	private int productId;
@@ -22,6 +17,7 @@ public class CartItem {
 	
 	// ảnh sp
 	private String avatar;
+
 
 	public String getAvatar() {
 		return avatar;
@@ -62,5 +58,4 @@ public class CartItem {
 	public void setPriceUnit(BigDecimal priceUnit) {
 		this.priceUnit = priceUnit;
 	}
-
 }
