@@ -175,6 +175,36 @@ public class CartController {
         return "home";
     }
 
+    @RequestMapping(value = { "/cart/deleteitem" }, method = RequestMethod.POST)
+    public ResponseEntity<Map<String, Object>> productDelete(final Model model,
+                                                             final HttpServletRequest request,
+                                                             final @RequestBody CartItem cartItem) {
+
+        HttpSession session = request.getSession();
+
+        Cart cart = (Cart) session.getAttribute("cart");
+        List<CartItem> cartItems = cart.getCartItems();
+
+        Iterator<CartItem> iterator = cartItems.iterator();
+        while (iterator.hasNext()) {
+            CartItem item = iterator.next();
+            if(item.getProductId() == cartItem.getProductId()) {
+                iterator.remove();
+                break;
+            }
+        }
+
+        Map<String, Object> jsonResult = new HashMap<String, Object>();
+        jsonResult.put("code", 200);
+        jsonResult.put("message", "Đã xóa thành công");
+        jsonResult.put("totalPrice", getTotalPrice(request));
+
+        session.setAttribute("totalItems", getTotalItems(request));
+        session.setAttribute("totalPrice", getTotalPrice(request));
+
+        return ResponseEntity.ok(jsonResult);
+    }
+
 
 
 }

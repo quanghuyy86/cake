@@ -29,6 +29,42 @@ function AddProductToCart(productId, quanlity){
 
         }
     });
-
-
 }
+
+function DeleteProductTocart(productId) {
+    //tạo javascript object
+    let data = {
+        productId: productId,
+    };
+    //$===jQuery
+    //json == javascript object
+    jQuery.ajax({
+        url: "http://localhost:8080/cart/deleteitem",
+        type: "post",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+
+        dataType: "json",
+        success: function(jsonResult) {
+            $('.btn-delete-sanpham').on('click', function(){
+                // $('.hang').remove();
+                // Lấy giá trị hiện tại của #total_price
+                let currentTotalPrice = parseFloat($("#total_price").text());
+
+                // Lấy giá trị của sản phẩm bị xóa
+                let deletedProductPrice = parseFloat($(this).parents('.hang').find('.product-price').text());
+
+                // Tính toán giá trị mới cho #total_price
+                let newTotalPrice = currentTotalPrice - deletedProductPrice;
+                $(this).parents('.hang').remove();
+                $("#total_price").text(newTotalPrice);
+            })
+        },
+        error: function(jqXhr, textStatus, errorMessage) {
+            alert("error");
+        }
+    });
+}
+
+
+
